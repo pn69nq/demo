@@ -1,7 +1,6 @@
 package com.pq.order.controller;
 
-import com.example.demo.entity.TUser;
-import com.example.demo.service.impl.UserServiceImpl;
+import com.pq.order.service.impl.OrderServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,15 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderController {
 
     @Autowired
-    UserServiceImpl userService;
+    OrderServiceImpl orderService;
 
     @RequestMapping("/index")
     public String testGet() {
-        TUser user = new TUser();
-        user.setName("ccc");
-        user.setPassword("noii");
-        user.setPhone("100100001");
-        userService.insertUser(user);
+
         return "qiang";
 
     }
