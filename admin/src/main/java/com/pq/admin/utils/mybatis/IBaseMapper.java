@@ -1,4 +1,4 @@
-package com.pq.user.utils.mybatis;
+package com.pq.admin.utils.mybatis;
 
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;

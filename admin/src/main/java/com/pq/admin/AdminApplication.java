@@ -1,14 +1,14 @@
-package com.pq.user;
+package com.pq.product;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(basePackages = "com.example.demo.mapper")
-public class UserApplication {
+@MapperScan(basePackages = "com.pq.admin.mapper")
+public class AdminApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UserApplication.class, args);
+        SpringApplication.run(AdminApplication.class, args);
     }
 }

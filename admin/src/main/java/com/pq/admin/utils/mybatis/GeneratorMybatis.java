@@ -1,4 +1,4 @@
-package com.pq.user.utils.mybatis;
+package com.pq.admin.utils.mybatis;
 
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
@@ -12,10 +12,12 @@ import java.util.List;
 public class GeneratorMybatis {
 
     public void generator() throws Exception{
-        List<String> warnings = new ArrayList<String>();
+        List<String> warnings = new ArrayList();
         boolean overwrite = true;
         //指定 逆向工程配置文件
-        File configFile = new File("generatorConfig.xml");
+        File file = new File("");
+        String rootPath = file.getAbsolutePath();
+        File configFile = new File(rootPath + File.separator + "product"+File.separator+"generatorConfig.xml");
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(configFile);
         DefaultShellCallback callback = new DefaultShellCallback(overwrite);
@@ -26,8 +28,8 @@ public class GeneratorMybatis {
 
     public static void main(String[] args) throws Exception {
         try {
-            GeneratorMybatis generatorSqlmap = new GeneratorMybatis();
-            generatorSqlmap.generator();
+            GeneratorMybatis generatorSqlMap = new GeneratorMybatis();
+            generatorSqlMap.generator();
         } catch (Exception e) {
             e.printStackTrace();
         }

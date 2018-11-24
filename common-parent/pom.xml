@@ -30,7 +30,7 @@
         <module>../product</module>
         <module>../order</module>
         <module>../common</module>
-        <module>../user</module>
+        <module>../account</module>
         <module>../admin</module>
     </modules>
 
